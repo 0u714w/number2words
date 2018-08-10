@@ -19,17 +19,33 @@ for (let a = 0; a < 8; a++) {
 
 }
 
-for (c = 1; c < 9; c++) {
+for (c = 0; c < 9; c++) {
 
     if (c < 9) {
         for (d = 0; d < 20; d++) {
-            num3 = [d] + hundreds[c] + " " + numbers[d] + ", "
-            let div = getElementById("div1")
+            num3 = hundreds[c] + " " + numbers[d] + ", "
+            let div = document.getElementById("div1")
             let result = document.createTextNode(num3)
             div.appendChild(result);
         }
     }
 
 
+    for (y = 0; y < 8; y++) {
+
+        for (z = 0; z < 10; z++) {
+            num4 = " " + hundreds[c] + "-" + tens[y] + " " + numbers[z] + ", ";
+            let div = document.getElementById("div1");
+            let result = document.createTextNode(num4)
+            div.appendChild(result)
+        }
+    }
+
+
 
 }
+
+let num5 = "one-thousand"
+let div = document.getElementById("div1");
+let result = document.createTextNode(num5)
+div.appendChild(result)
